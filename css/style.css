@@ -1,0 +1,87 @@
+:root {
+    --main-color: #3742fa;
+    --second-color: #70a1ff;
+    --grey: #a4b0be;
+    --white: #ffffff;
+    --danger: #ff4757;
+}
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: content-box;
+}
+
+body {
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    margin-top: 10rem;
+    height: auto;
+    width: auto;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.container label,
+input {
+    margin: 0.5rem;
+}
+
+.container label {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.container input {
+    height: 2rem;
+    font-size: 1.2rem;
+    width: auto;
+    padding-left: 0.5rem;
+    border: none;
+}
+
+.container button {
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    background: var(--second-color);
+    margin: 0.5rem;
+}
+
+.taskContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--second-color);
+}
+
+.taskContainer div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.deleteTask {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    margin: 0.5rem;
+    background: var(--danger);
+}
+
+.deleteTask i {
+    color: var(--white);
+}
