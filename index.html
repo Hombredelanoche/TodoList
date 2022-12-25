@@ -12,12 +12,16 @@
 <body>
     <main>
         <section class="main-container">
-            <div class="container">
-                <label for="task">Ajouter vos tâches</label>
-                <input type="text" name="task" id="task">
-                <button type="submit" class="sendTask" onclick="createTask()"><i class="fa-solid fa-plus"></i></button>
-            </div>   
-            <div class="remainingTask"></div>
+        <article class="title-container">
+            <h1>Ma todoList</h1>
+        </article>
+        <article class="input-container">
+            <input type="text" name="task" id="task" placeholder="Enter ur task">
+            <button class="createTask" onclick="createTask()"><i class="fa-sharp fa-solid fa-plus"></i></button>
+        </article>
+        <article class="task-container">
+            <div class="newTask"></div>
+        </article>
         </section>
     </main>
 </body>

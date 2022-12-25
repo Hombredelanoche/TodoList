@@ -3,12 +3,17 @@ function createTask() {
   if (task === "") {
     console.log("Something didn't worked");
   } else {
-    document.querySelector(
-      ".remainingTask"
-    ).innerHTML += `<article class='taskContainer'><div class='newTask'> ${task} </div> <button class='deleteTask' onclick='deleteTask()'><i class="fa-solid fa-trash"></i></button></article>`;
+    document.querySelector(".newTask").innerHTML +=
+      "<span class='available' onclick='taskDone()'>" + task + "</span>";
+    alert(`${task} à bien été ajouter à votre liste`);
+    document.querySelector("#task").value = "";
   }
 }
 
-function deleteTask() {
-  document.querySelector(".taskContainer").innerHTML = "";
+function taskDone() {
+  let task = document.querySelector(".available");
+  for (let i = 0; i < task; i++) {
+    let getTask = task[i];
+    getTask.classList.add("taskFinish");
+  }
 }
