@@ -6,7 +6,6 @@ function createTask() {
     document.querySelector(
       ".remainingTask"
     ).innerHTML += `<article class='taskContainer'><div class='newTask'> ${task} </div> <button class='deleteTask' onclick='deleteTask()'><i class="fa-solid fa-trash"></i></button></article>`;
-    task.value === "";
   }
 }
 
