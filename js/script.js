@@ -9,9 +9,9 @@ createTask.onclick = function () {
     alert("Votre tâche à bien été créer.");
     todoDiv.innerText = getTask.value; // Je valorise ma div
 
-    todoDiv.classList.add("todoDivStyle"); // Ajout de classe
-
     setTask.appendChild(todoDiv); // Placement de la div dans le DOM
+
+    todoDiv.classList.add("todoDivStyle"); // Ajout de classe
 
     getTask.value = ""; // Vider l'input #task
 
@@ -22,7 +22,7 @@ createTask.onclick = function () {
 
     todoDiv.addEventListener("dblclick", function () {
       // Supprimer la div
-      setTask.remove(todoDiv);
+      setTask.removeChild(todoDiv);
     });
   }
 };
