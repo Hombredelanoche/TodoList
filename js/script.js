@@ -1,19 +1,28 @@
-function createTask() {
-  const task = document.querySelector("#task").value;
-  if (task === "") {
-    console.log("Something didn't worked");
-  } else {
-    document.querySelector(".newTask").innerHTML +=
-      "<span class='available' onclick='taskDone()'>" + task + "</span>";
-    alert(`${task} à bien été ajouter à votre liste`);
-    document.querySelector("#task").value = "";
-  }
-}
+const getTask = document.querySelector("#task");
+const setTask = document.querySelector(".newTask");
+const createTask = document.querySelector(".createTask");
 
-function taskDone() {
-  let task = document.querySelector(".available");
-  for (let i = 0; i < task; i++) {
-    let getTask = task[i];
-    getTask.classList.add("taskFinish");
+createTask.onclick = function () {
+  if (getTask.value != "") {
+    // Si le champs n'est pas vide alors je crée une balise div
+    let todoDiv = document.createElement("div");
+    alert("Votre tâche à bien été créer.");
+    todoDiv.innerText = getTask.value; // Je valorise ma div
+
+    todoDiv.classList.add("todoDivStyle"); // Ajout de classe
+
+    setTask.appendChild(todoDiv); // Placement de la div dans le DOM
+
+    getTask.value = ""; // Vider l'input #task
+
+    todoDiv.addEventListener("click", function () {
+      // ChangeCOlor et barrer la task
+      todoDiv.classList.add("taskFinish");
+    });
+
+    todoDiv.addEventListener("dblclick", function () {
+      // Supprimer la div
+      setTask.remove(todoDiv);
+    });
   }
-}
+};

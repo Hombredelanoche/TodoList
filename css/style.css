@@ -83,12 +83,30 @@ body {
     width: 20rem;
 }
 
-.newTask span {
-    padding: 1rem;
-    font-size: 1.2rem;
+.todoDivStyle {
+    display: flex;
+    height: 2rem;
+    background: var(--second-color);
+    color: var(--white);
+    align-items: center;
+    padding-left: 1rem;
+    word-break: break-all;
+    cursor: pointer;
+    animation: anime 0.5s linear;
+}
+
+.todoDivStyle:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes anime {
+    from {
+        transform: translateY(5rem);
+    }
 }
 
 .taskFinish {
     background: #fab1a0;
     color: white;
+    text-decoration: line-through;
 }
